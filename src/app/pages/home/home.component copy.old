@@ -1,0 +1,87 @@
+<div class="bamaq-anim">
+    <section class="section-header">
+        <div class="p-3">
+            <div class="row justify-content-between">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <input type="text" class="p-2 text-center search-input w-100 animate__animated animate__fadeInDown" placeholder="Buscar meu próximo veículo">
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-banner px-3">
+        <div style="height: 434px; width: 100%; border-radius: 0.9rem" class="black-gradient text-center d-flex flex-column align-items-center py-5">
+            <p class="white-thin-text mt-auto">
+                Busque o carro que mais combina com seu estilo.
+            </p>
+            <button class="btn banner-button black-text px-4 py-3 border-0">Buscar meu estilo</button>
+        </div>
+    </section>
+
+    <section class="section-carousel">
+        <div class="row px-0 justify-content-center text-center mt-5">
+            <span class="section-text mb-2">Principais marcas</span>
+            <div class="half-underline"></div>
+        </div>
+
+        <div class="my-5 d-flex overflow-scroll">
+            <div *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]" data-aos="fade-right" class="square-card me-2 animate__animated animate__fadeIn">
+                <img class="m-image" width="90px" height="67px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/porsche-logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="model-container px-3">
+            <div *ngFor="let item of [1,2,3]" class="row justify-content-center mb-4" style="text-align: -webkit-center;">
+                <div class="col">
+                    <div class="square-card-big animate__animated animate__fadeInLeft reveal">
+                        <img class="m-image" width="142px" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/Cayenne Turbo 2.png" alt=" ">
+                        <span class="section-text mb-2">718</span>
+                        <a href="#">Ver modelos</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="square-card-big animate__animated animate__fadeInRight reveal">
+                        <img class="m-image" width="142px" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/Cayenne Turbo 2.png" alt=" ">
+                        <span class="section-text mb-2">718</span>
+                        <a href="#">Ver modelos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-experience">
+        <div class="grey-bg py-5 my-5">
+            <div class="row px-0 justify-content-center text-center mb-4 animate__animated animate__fadeIn reveal">
+                <span class="section-text mb-2">Busque por experiência</span>
+                <div class="half-underline"></div>
+            </div>
+            <div class="d-flex overflow-scroll">
+                <div *ngFor="let item of [1,2,3,4,5,6]" class="text-center mx-5 animate__animated animate__fadeIn reveal flex-column">
+                    <div class="c-ball ball-bg rounded-circle"></div>
+                    <span class="mt-2">Elétricos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-contrast">
+        <div class="py-5 my-5">
+            <div class="row px-0 justify-content-center text-center mb-4 animate__animated animate__fadeIn reveal">
+                <span class="section-text mb-2">Destaques</span>
+                <div class="half-underline"></div>
+            </div>
+            <div class="d-flex overflow-scroll">
+                <div *ngFor="let item of [1,2,3,4,5,6]" class="text-center mx-3">
+                    <div class="ball-bg rounded-3 text-start d-flex flex-column p-2 animate__animated animate__fadeIn reveal" style="height: 186px; width: 162px;">
+                        <span class="fw-bold mt-auto">Porsche</span>
+                        <span>718 Cayman GT4 (982)</span>
+                        <h3 class="fw-bold mt-2">R$ 1.329.900</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
