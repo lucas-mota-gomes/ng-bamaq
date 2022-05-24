@@ -11,18 +11,9 @@
         </div>
     </section>
 
-    <section class="section-banner px-3">
-        <div style="height: 434px; width: 100%; border-radius: 0.9rem" class="black-gradient text-center d-flex flex-column align-items-center py-5">
-            <p class="white-thin-text mt-auto">
-                Busque o carro que mais combina com seu estilo.
-            </p>
-            <button class="btn banner-button black-text px-4 py-3 border-0">Buscar meu estilo</button>
-        </div>
-    </section>
-
     <section class="section-carousel">
-        <div class="row px-0 justify-content-center text-center mt-5">
-            <span class="section-text mb-2">Principais marcas</span>
+        <div class="px-0 justify-content-start text-start ms-3 mt-5">
+            <span class="section-text mb-2">Busque por marca</span>
             <div class="half-underline"></div>
         </div>
 
@@ -69,28 +60,54 @@
     </section>
 </div>
 
-<div style="height: 95vh;" class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header">
-        <img width="100px" [src]="selected.img" alt="">
-        <button (click)="selected = []; model = ''; modelo = 0" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div style="height: 95vh;" class="offcanvas offcanvas-bottom p-0" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header" style="background: black">
+        <div class="">
+            <img width="80px" [src]="selected.img" alt="">
+        </div>
+        <i style="color: white;" [style.background]="selected.button" data-bs-dismiss="offcanvas" aria-label="Close" class="material-icons p-1" (click)="selected = []; model = ''; modelo = 0">close</i>
+        <!-- <button style="background-color: white !important" (click)="selected = []; model = ''; modelo = 0" type="button"
+      class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
     </div>
-    <div class="offcanvas-body small">
-        <div *ngIf="modelo == 0; else modelin" class="model-container px-3">
-            <div *ngFor="let item of [1,2,3]" class="row justify-content-center mb-4" style="text-align: -webkit-center;">
-                <div class="col">
-                    <div [class.d-none]="selected.length == 0" class="square-card-big animate__animated animate__fadeInLeft">
-                        <img class="m-image" width="142px" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/Cayenne Turbo 2.png" alt=" ">
-                        <span class="section-text mb-2">718</span>
-                        <a (click)="modelo = 718">Ver modelos</a>
+    <hr class="py-1 m-0" [style.color]="selected.cor1" style="opacity: 1">
+    <hr class="py-1 m-0" [style.color]="selected.cor2" style="opacity: 1">
+    <div class="offcanvas-body small p-0">
+        <div *ngIf="modelo == 0; else modelin" class="model-container">
+            <div *ngFor="let item of [1,2,3]" class="row justify-content-center" style="text-align: -webkit-center;">
+                <div class="col p-0" style="width: 50vw;">
+                    <div [class.d-none]="selected.length == 0" style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);" class="square-card-big border-0 rounded-0 animate__animated animate__fadeInLeft">
+                        <img class="m-image" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png" alt=" ">
+                        <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
+                            <span class="section-text" style="color: white">718</span>
+                            <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
+                        </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div [class.d-none]="selected.length == 0" class="square-card-big animate__animated animate__fadeInRight">
-                        <img class="m-image" width="142px" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/Cayenne Turbo 2.png" alt=" ">
-                        <span class="section-text mb-2">718</span>
-                        <a (click)="modelo = 718">Ver modelos</a>
+                <div class="col p-0" style="width: 50vw;">
+                    <div [class.d-none]="selected.length == 0" style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);" class="square-card-big border-0 rounded-0 animate__animated animate__fadeInRight">
+                        <img class="m-image" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png" alt=" ">
+                        <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
+                            <span class="section-text" style="color: white">718</span>
+                            <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div *ngIf="modelo != 0" class="model-list p-3">
+            <div class="announce mb-5" *ngFor="let item of [1,2,3,4,5]">
+                <img class="rounded-3" width="100%" height="250px" src="https://htmlcolorcodes.com/assets/images/colors/steel-gray-color-solid-background-1920x1080.png" alt="">
+                <h4 class="fw-bold mt-4">Porsche</h4>
+                <h4 class="mb-3 mt-2">718 Cayman GT4 (982)</h4>
+                <h1 class="fw-bold">R$ 509.900</h1>
+                <div class="d-flex justify-content-between mt-3">
+                    <label for="">2020/2021</label>
+                    <label for="">2.118 km</label>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a style="font-size: 14px;" href="">Ver mais anúncios</a>
             </div>
         </div>
     </div>
@@ -98,7 +115,7 @@
 
 <ng-template #modelin>
     <img class="animate__animated animate__zoomIn" [class.d-none]="selected.length == 0" width="100%" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png" alt="">
-    <div class="d-flex overflow-scroll">
+    <div class="d-flex overflow-scroll px-3">
         <div (click)="model = item.id" [ngStyle]="{'background-color': model == item.id ? selected.button : 'transparent', 'color': model == item.id ? 'white' : 'black'}" *ngFor="let item of selected.models" class="model-button me-3">
             <span>{{item.name}}</span>
         </div>
