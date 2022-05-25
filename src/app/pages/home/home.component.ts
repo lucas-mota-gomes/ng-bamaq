@@ -9,6 +9,7 @@ export class HomeComponent implements OnInit {
   toggle: boolean;
   model = "";
   modelo = 0;
+  filter = false;
   lista: Array<any> = [
     {
       brand: "Porsche",
@@ -430,6 +431,48 @@ export class HomeComponent implements OnInit {
     }
   ];
 
+  experienceList: Array<any> = [
+    {
+      "name": "Aventura",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/aventura.png"
+    },
+    {
+      "name": "Esportivo",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/esportivo.png"
+    },
+    {
+      "name": "Família",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/familia.png"
+    },
+    {
+      "name": "Luxuoso",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/luxuoso.png"
+    },
+    {
+      "name": "SUVs",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/suv.png"
+    },
+    {
+      "name": "Conversível",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/conversível.png"
+    },
+    {
+      "name": "Sedans",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/sedan.png"
+    },
+    {
+      "name": "Importados",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/importado.png"
+    },
+    {
+      "name": "Eletrícos",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/eletric car.png"
+    },
+    {
+      "name": "Blindados",
+      "img": "https://cdn.nickbuilder.com.br/6e35be2d-2444-4d9b-b35b-eaa78a74fe60/img/blindado.png"
+    },
+  ]
   selected: any = [];
 
   constructor() { }
