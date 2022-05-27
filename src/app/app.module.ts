@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { FiltrosComponent } from './pages/filtros/filtros.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
+import { AnnounceCardComponent } from './component/announce-card/announce-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CarouselComponent } from './component/carousel/carousel.component';
     HomeComponent,
     ExperienceComponent,
     FiltrosComponent,
-    CarouselComponent
+    CarouselComponent,
+    AnnounceCardComponent
   ],
   imports: [
     BrowserModule,
