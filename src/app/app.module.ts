@@ -8,6 +8,8 @@ import { ExperienceComponent } from './pages/experience/experience.component';
 import { FiltrosComponent } from './pages/filtros/filtros.component';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { AnnounceCardComponent } from './component/announce-card/announce-card.component';
+import { AnnounceComponent } from './pages/announce/announce.component';
+import { BannerComponent } from './component/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AnnounceCardComponent } from './component/announce-card/announce-card.c
     ExperienceComponent,
     FiltrosComponent,
     CarouselComponent,
-    AnnounceCardComponent
+    AnnounceCardComponent,
+    AnnounceComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
