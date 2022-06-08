@@ -10,6 +10,11 @@ import { CarouselComponent } from './component/carousel/carousel.component';
 import { AnnounceCardComponent } from './component/announce-card/announce-card.component';
 import { AnnounceComponent } from './pages/announce/announce.component';
 import { BannerComponent } from './component/banner/banner.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SearchPlateComponent } from './pages/seller/search-plate/search-plate.component';
+import { ProposalComponent } from './component/proposal/proposal.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { RegisterComponent } from './pages/session/register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { BannerComponent } from './component/banner/banner.component';
     CarouselComponent,
     AnnounceCardComponent,
     AnnounceComponent,
-    BannerComponent
+    BannerComponent,
+    LoginComponent,
+    SearchPlateComponent,
+    ProposalComponent,
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

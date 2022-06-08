@@ -1,0 +1,57 @@
+<div *ngIf="!search" class="p-3">
+    <h3 class="fw-bold mb-4">Qual é o veículo que está na sua garagem?</h3>
+    <div class="my-5">
+        <label for="formGroupExampleInput" class="form-label">Placa</label>
+        <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira a placa do veículo">
+    </div>
+    <div class="text-center">
+        <button (click)="search = true" class="btn btn-dark py-3 px-5">Buscar</button>
+    </div>
+</div>
+
+<div *ngIf="search" class="p-3">
+    <h3 class="fw-bold mb-4">Qual é o veículo que está na sua garagem?</h3>
+    <div class="my-5 text-center">
+        <img width="100px" src="https://cdn.nickbuilder.com.br/d04296cf-3817-48db-915d-10828eec3486/img/Frame 923(4).png" alt="">
+    </div>
+    <div style="text-transform: uppercase;">
+        <div class="mb-3">
+            <span>Marca</span>
+            <br>
+            <span class="fw-bold">Porsche</span>
+        </div>
+        <div class="mb-3">
+            <span>MODELO</span>
+            <br>
+            <span class="fw-bold">911 Carrera S</span>
+        </div>
+        <div class="mb-3">
+            <span>ano modelo</span>
+            <br>
+            <span class="fw-bold">2019/2020</span>
+        </div>
+        <div class="mb-3">
+            <span>ano de fabricação</span>
+            <br>
+            <span class="fw-bold">2019</span>
+        </div>
+        <div class="mb-3">
+            <span>cor</span>
+            <br>
+            <span class="fw-bold">Preto</span>
+        </div>
+        <div class="mb-3">
+            <span>Combustível</span>
+            <br>
+            <span class="fw-bold">Gasolina</span>
+        </div>
+        <div class="mb-3">
+            <span>Preço de Referência FIPE</span>
+            <br>
+            <span class="fw-bold">R$ 984.997</span>
+        </div>
+    </div>
+    <div class="text-center my-5">
+        <button class="btn btn-dark py-3">AGENDAR VISTORIA</button>
+    </div>
+</div>

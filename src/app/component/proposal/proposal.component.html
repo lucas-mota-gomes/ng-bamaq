@@ -1,0 +1,26 @@
+<div *ngIf="!logged" class="d-flex flex-column w-100 justify-content-center align-items-center" style="height: 100vh;">
+    <img (click)="logged = !logged" class="mb-4" src="https://cdn.nickbuilder.com.br/d04296cf-3817-48db-915d-10828eec3486/img/auction 1.png" width="155px" height="155px" alt="">
+    <b>Faça a sua proposta!</b>
+    <button class="btn btn-dark my-5">Cria uma conta para continuar</button>
+    <a href="#">Eu já tenho uma conta</a>
+</div>
+
+<div *ngIf="logged && !sent" class="d-flex flex-column w-100 justify-content-center align-items-center" style="height: 100vh;">
+    <img (click)="sent = !sent" class="mb-4" src="https://cdn.nickbuilder.com.br/d04296cf-3817-48db-915d-10828eec3486/img/auction 1.png" width="155px" height="155px" alt="">
+    <b>Faça a sua proposta!</b>
+    <div class="input-group my-4" style="max-width: 11rem;">
+        <i class="input-group-text material-icons-outlined" style="background-color: black; color:  white;" id="basic-addon1">monetization_on</i>
+        <input type="text" class="form-control" placeholder="R$ 1.000.000" aria-label="Valor" aria-describedby="basic-addon1">
+    </div>
+
+    <button class="btn btn-dark">Enviar</button>
+</div>
+
+<div *ngIf="logged && sent" class="d-flex flex-column w-100 justify-content-center align-items-center" style="height: 100vh;">
+    <div style="background-color: #CDE1DD; width: 155px; height: 155px;" class="d-flex justify-content-center align-items-center rounded-circle">
+        <i class="material-icons-outlined" style="color: #72A27A; font-size: 72px;">check_circle</i>
+    </div>
+    <b class="my-4">Proposta enviada com sucesso!</b>
+    <span>Aguarde enquanto analisamos a sua proposta.</span>
+    <button class="btn btn-dark mt-4">Voltar</button>
+</div>

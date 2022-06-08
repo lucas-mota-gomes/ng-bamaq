@@ -1,0 +1,27 @@
+<section class="p-3">
+    <div class="px-0 justify-content-start text-start mb-4 animate__animated animate__fadeIn mb-5">
+        <span class="section-text mb-2">Dados básicos</span>
+        <div class="half-underline"></div>
+    </div>
+    <span>Acesse sua conta para visualizar suas compras em andamento e anúncios.</span>
+    <div>
+        <div class="my-5">
+            <nick-input style="width: auto;" class="beta-mr-28" [nickCrudField]="loginForm.email" placeholder="Insira seu e-mail"></nick-input>
+        </div>
+        <div class="my-5">
+            <nick-input style="width: auto;" class="beta-mr-28" [nickCrudField]="loginForm.password" placeholder="*****"></nick-input>
+        </div>
+        <div class="form-check">
+            <nick-checkbox [nickCrudField]="loginForm.stayOn"></nick-checkbox>
+        </div>
+        <button class="btn btn-dark w-100 py-3 mt-5 mb-3">Acessar</button>
+        <div class="text-center">
+            <span>
+                Não possui conta?
+                <a style="font-size: 1rem;" routerLink="/register">
+                    <b>Cadastrar</b>
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
