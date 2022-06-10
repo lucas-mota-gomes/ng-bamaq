@@ -1,56 +1,63 @@
-<div class="p-3 overflow-hidden card-minimal" id="card-minimal" style="display: flex;">
-    <div class="card-item p-3">
-        <h2 class="fw-bold m-0">911 Carrera</h2>
-        <p>Porsche</p>
-    </div>
-    <img style="border-radius: 10px;position: absolute;" width="198px" height="130px" src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/porsche.png?raw=true" id="imagem" alt="">
-    <div class="shadow-card p-3" id="dragg">
-        <h2 class="fw-bold m-0">911 Carrera</h2>
-        <p>Porsche</p>
-    </div>
+<div onclick="teste()" *ngFor="let item of [0,1,2,3,4,5]; let i = index"
+  class="p-3 overflow-hidden card-minimal position-relative" [id]="'card-minimal'+i" style="display: flex;">
+  <div class="card-item p-3">
+    <h2 class="fw-bold m-0">911 Carrera</h2>
+    <p>Porsche</p>
+  </div>
+  <img style="border-radius: 10px;position: absolute;" width="198px" height="130px"
+    src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/porsche.png?raw=true"
+    id="imagem" alt="">
+  <div class="shadow-card p-3" id="dragg">
+    <h2 class="fw-bold m-0">911 Carrera</h2>
+    <p>Porsche</p>
+  </div>
 </div>
 
 <div class="card-expanded w-100 animate__animated animate__zoomIn" style="display: none;" id="card-full">
-    <!-- Header -->
-    <div class="d-flex justify-content-between align-items-center p-3">
-        <div class="">
-            <h2 class="fw-bold">911 Carrera</h2>
-            <label for="">Porsche</label>
-            <h6 class="fw-bold">R$ 930.000</h6>
-        </div>
-        <div>
-            <img src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/garagem.png?raw=true" width="30px" height="30px" alt="">
-        </div>
+  <!-- Header -->
+  <div class="d-flex justify-content-between align-items-center p-3">
+    <div class="">
+      <h2 class="fw-bold">911 Carrera</h2>
+      <label for="">Porsche</label>
+      <h6 class="fw-bold">R$ 930.000</h6>
     </div>
-    <!-- Carrousel -->
-    <div class="d-flex overflow-scroll">
-        <img *ngFor="let item of [0,1,2,3,4,5]" class="me-2" style="border-radius: 10px;" src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/porsche.png?raw=true" width="293px" alt="">
+    <div>
+      <img
+        src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/garagem.png?raw=true"
+        width="30px" height="30px" alt="">
     </div>
-    <!-- Icones -->
-    <div class="p-5 pb-3">
-        <div class="d-flex justify-content-between mb-3">
-            <div class="d-flex">
-                <i class="material-icons mx-2">speed</i>
-                <span>11.800</span>
-            </div>
-            <div class="d-flex" style="min-width: 105px;">
-                <i class="material-icons mx-2">directions_car</i>
-                <span>Coupê</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-between">
-            <div class="d-flex">
-                <i class="material-icons mx-2">calendar_month</i>
-                <span>2020</span>
-            </div>
-            <div class="d-flex">
-                <i class="material-icons mx-2">local_gas_station</i>
-                <span>Gasolina</span>
-            </div>
-        </div>
-        <div class="w-100 d-flex justify-content-center mt-5">
-            <button type="button" class="btn btn-outline-light d-flex p-2">Ver anúncio <i class="material-icons"
+  </div>
+  <!-- Carrousel -->
+  <div class="d-flex overflow-scroll">
+    <img *ngFor="let item of [0,1,2,3,4,5]" class="me-2" style="border-radius: 10px;"
+      src="https://github.com/lucas-mota-gomes/ng-bamaq/blob/b1d33d43715325eb79a8123f5dd19e90be99222b/src/assets/images/porsche.png?raw=true"
+      width="293px" alt="">
+  </div>
+  <!-- Icones -->
+  <div class="p-5 pb-3">
+    <div class="d-flex justify-content-between mb-3">
+      <div class="d-flex">
+        <i class="material-icons mx-2">speed</i>
+        <span>11.800</span>
+      </div>
+      <div class="d-flex" style="min-width: 105px;">
+        <i class="material-icons mx-2">directions_car</i>
+        <span>Coupê</span>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="d-flex">
+        <i class="material-icons mx-2">calendar_month</i>
+        <span>2020</span>
+      </div>
+      <div class="d-flex">
+        <i class="material-icons mx-2">local_gas_station</i>
+        <span>Gasolina</span>
+      </div>
+    </div>
+    <div class="w-100 d-flex justify-content-center mt-5">
+      <button type="button" class="btn btn-outline-light d-flex p-2">Ver anúncio <i class="material-icons"
           style="color: white">arrow_forward</i></button>
-        </div>
     </div>
+  </div>
 </div>

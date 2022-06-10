@@ -1,66 +1,72 @@
 <app-banner></app-banner>
 
 <div class="bamaq-anim" id="bamaqmain" style="display: none;">
-    <section class="section-header">
-        <div class="p-3">
-            <div class="row justify-content-between animate__animated animate__fadeInDown">
-                <div class="col-2">
-                    <div class="d-flex align-items-center justify-content-center h-100">
-                        <i class="material-icons">menu</i>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <input type="text" class="p-2 text-center search-input w-100" placeholder="Buscar meu próximo veículo">
-                </div>
-                <div class="col-2">
-                    <div class="d-flex align-items-center justify-content-center h-100">
-                        <img width="35px" height="35px" src="https://cdn.nickbuilder.com.br/d04296cf-3817-48db-915d-10828eec3486/img/icon_garagem_figma-08.svg" alt="">
-                    </div>
-                </div>
-            </div>
+  <section class="section-header">
+    <div class="p-3">
+      <div class="row justify-content-between animate__animated animate__fadeInDown">
+        <div class="col-2">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <i class="material-icons">menu</i>
+          </div>
         </div>
-    </section>
-
-    <section class="section-carousel pt-5" style="background-color: black;">
-        <div class="px-0 justify-content-start text-start ms-3 mt-5">
-            <span class="section-text mb-2" style="color: white;">Busque por marca</span>
-            <div class="half-underline" style="border-color: white; background-color: white;"></div>
+        <div class="col-8">
+          <input type="text" class="p-2 text-center search-input w-100" placeholder="Buscar meu próximo veículo">
         </div>
-
-        <div class="my-5 parent">
-            <div *ngFor="let item of lista" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" (click)="selected = item" data-aos="fade-right" class="animate__animated animate__fadeIn m-1 ms-0 mt-0">
-                <div class="brand d-flex justify-content-center align-items-center p-5" style="background: radial-gradient(circle, {{item.cor1}} 0%, {{item.cor2}} 91%);">
-                    <img [src]="item.img" alt="">
-                </div>
-            </div>
+        <div class="col-2">
+          <div class="d-flex align-items-center justify-content-center h-100">
+            <img width="35px" height="35px"
+              src="https://cdn.nickbuilder.com.br/d04296cf-3817-48db-915d-10828eec3486/img/icon_garagem_figma-08.svg"
+              alt="">
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section-experience">
-        <div class="grey-bg py-5 my-5">
-            <div class="px-0 justify-content-center text-start ms-3 mb-4 animate__animated animate__fadeIn">
-                <span class="section-text mb-2">Busque por experiência</span>
-                <div class="half-underline"></div>
-            </div>
-            <div class="d-flex overflow-scroll">
-                <div *ngFor="let item of experienceList" class="text-center animate__animated animate__fadeIn reveal flex-column">
-                    <div class="">
-                        <img width="180px" height="180px" [src]="item.img" alt="">
-                    </div>
-                    <span class="mt-2">{{item.name}}</span>
-                </div>
-            </div>
+  <section class="section-carousel pt-5" style="background-color: black;">
+    <div class="px-0 justify-content-start text-start ms-3 mt-5">
+      <span class="section-text mb-2" style="color: white;">Busque por marca</span>
+      <div class="half-underline" style="border-color: white; background-color: white;"></div>
+    </div>
+
+    <div class="my-5 parent">
+      <div *ngFor="let item of lista" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom" (click)="selected = item" data-aos="fade-right"
+        class="animate__animated animate__fadeIn m-1 ms-0 mt-0">
+        <div class="brand d-flex justify-content-center align-items-center p-5"
+          style="background: radial-gradient(circle, {{item.cor1}} 0%, {{item.cor2}} 91%);">
+          <img [src]="item.img" alt="">
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="section-contrast revealB">
-        <div class="py-5 my-5">
-            <div class="px-0 justify-content-start text-start ms-3 mb-4 animate__animated animate__fadeIn">
-                <span class="section-text mb-2">Destaques</span>
-                <div class="half-underline"></div>
-            </div>
-            <div class="">
-                <!-- <div class="text-center">
+  <section class="section-experience">
+    <div class="grey-bg py-5 my-5">
+      <div class="px-0 justify-content-center text-start ms-3 mb-4 animate__animated animate__fadeIn">
+        <span class="section-text mb-2">Busque por experiência</span>
+        <div class="half-underline"></div>
+      </div>
+      <div class="d-flex overflow-scroll">
+        <div *ngFor="let item of experienceList"
+          class="text-center animate__animated animate__fadeIn reveal flex-column">
+          <div class="">
+            <img width="180px" height="180px" [src]="item.img" alt="">
+          </div>
+          <span class="mt-2">{{item.name}}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contrast revealB">
+    <div class="py-5 my-5">
+      <div class="px-0 justify-content-start text-start ms-3 mb-4 animate__animated animate__fadeIn">
+        <span class="section-text mb-2">Destaques</span>
+        <div class="half-underline"></div>
+      </div>
+      <div class="">
+        <!-- <div class="text-center">
           <div id="carouselDestaques" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item" [class.active]="i == 0" *ngFor="let item of [1,2,3,4,5,6]; let i = index;">
@@ -75,99 +81,122 @@
           </div>
 
         </div> -->
-                <app-carousel></app-carousel>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <app-footer></app-footer>
-    </footer>
+        <app-carousel></app-carousel>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
 </div>
 
-<div style="height: 91.6vh;" class="offcanvas offcanvas-bottom p-0" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-    <div class="offcanvas-header" style="background: black">
-        <div class="">
-            <img width="80px" [src]="selected.img" alt="">
-        </div>
-        <i style="color: white;" [style.background]="selected.button" data-bs-dismiss="offcanvas" aria-label="Close" class="material-icons p-1" (click)="selected = []; model = ''; modelo = 0">close</i>
-        <!-- <button style="background-color: white !important" (click)="selected = []; model = ''; modelo = 0" type="button"
+<div style="height: 91.6vh;" class="offcanvas offcanvas-bottom p-0" tabindex="-1" id="offcanvasBottom"
+  aria-labelledby="offcanvasBottomLabel">
+  <div class="offcanvas-header" style="background: black">
+    <div class="">
+      <img width="80px" [src]="selected.img" alt="">
+    </div>
+    <i style="color: white;" [style.background]="selected.button" data-bs-dismiss="offcanvas" aria-label="Close"
+      class="material-icons p-1" (click)="selected = []; model = ''; modelo = 0">close</i>
+    <!-- <button style="background-color: white !important" (click)="selected = []; model = ''; modelo = 0" type="button"
       class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
-    </div>
-    <hr class="py-1 m-0" [style.color]="selected.cor1" style="opacity: 1">
-    <hr class="py-1 m-0" [style.color]="selected.cor2" style="opacity: 1">
-    <div class="offcanvas-body small p-0">
-        <div *ngIf="modelo != 0; else modelin" class="model-container">
-            <div *ngFor="let item of [1,2,3]" class="row justify-content-center" style="text-align: -webkit-center;">
-                <div class="col p-0" style="width: 50vw;">
-                    <div [class.d-none]="selected.length == 0" style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);" class="square-card-big border-0 rounded-0 animate__animated animate__fadeInLeft">
-                        <img class="m-image" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png" alt=" ">
-                        <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
-                            <span class="section-text" style="color: white">718</span>
-                            <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col p-0" style="width: 50vw;">
-                    <div [class.d-none]="selected.length == 0" style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);" class="square-card-big border-0 rounded-0 animate__animated animate__fadeInRight">
-                        <img class="m-image" height="86px" src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png" alt=" ">
-                        <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
-                            <span class="section-text" style="color: white">718</span>
-                            <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
-                        </div>
-                    </div>
-                </div>
+  </div>
+  <hr class="py-1 m-0" [style.color]="selected.cor1" style="opacity: 1">
+  <hr class="py-1 m-0" [style.color]="selected.cor2" style="opacity: 1">
+  <div class="offcanvas-body small p-0">
+    <div *ngIf="modelo != 0; else modelin" class="model-container">
+      <div *ngFor="let item of [1,2,3]" class="row justify-content-center" style="text-align: -webkit-center;">
+        <div class="col p-0" style="width: 50vw;">
+          <div [class.d-none]="selected.length == 0"
+            style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);"
+            class="square-card-big border-0 rounded-0 animate__animated animate__fadeInLeft">
+            <img class="m-image" height="86px"
+              src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png"
+              alt=" ">
+            <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
+              <span class="section-text" style="color: white">718</span>
+              <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
             </div>
+          </div>
         </div>
-
-        <div *ngIf="modelo == 0" class="model-list p-3">
-            <ng-container>
-                <div class="text-end mb-3 d-flex">
-                    <button (click)="filter = true" type="button" class="me-2 btn btn-outline-dark d-flex justify-content-center align-items-center">
-                        <i class="material-icons">filter_alt</i>
-                        <span>Filtro</span>
-                    </button>
-                    <button [style.background-color]="panel ? '#F5F5F5' : 'transparent'" (click)="panel = !panel" type="button" class="btn btn-outline-dark d-flex justify-content-center align-items-center">
-                        <i class="material-icons-outlined">splitscreen</i>
-                        <span>{{panel ? 'Painel' : 'Lista'}}</span>
-                    </button>
-                </div>
-                <div class="announce mb-5" *ngFor="let item of [1,2,3,4,5]">
-                    <img class="rounded-3" width="100%" height="250px" src="https://htmlcolorcodes.com/assets/images/colors/steel-gray-color-solid-background-1920x1080.png" alt="">
-                    <h4 class="fw-bold mt-4">Porsche</h4>
-                    <h4 class="mb-3 mt-2">718 Cayman GT4 (982)</h4>
-                    <h1 class="fw-bold">R$ 509.900</h1>
-                    <div class="d-flex justify-content-between mt-3">
-                        <label for="">2020/2021</label>
-                        <label for="">2.118 km</label>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a style="font-size: 14px;" href="">Ver mais anúncios</a>
-                </div>
-                div>
-            </ng-container>
+        <div class="col p-0" style="width: 50vw;">
+          <div [class.d-none]="selected.length == 0"
+            style="background: radial-gradient(circle, {{selected.cor1}} 0%, {{selected.cor2}} 91%);"
+            class="square-card-big border-0 rounded-0 animate__animated animate__fadeInRight">
+            <img class="m-image" height="86px"
+              src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png"
+              alt=" ">
+            <div (click)="modelo = 718" class="d-flex justify-content-center align-items-center">
+              <span class="section-text" style="color: white">718</span>
+              <i class="material-icons" [style.color]="selected.button">arrow_forward_ios</i>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
 
-    <ng-template #modelin>
-        <!-- <img class="animate__animated animate__zoomIn" [class.d-none]="selected.length == 0" width="100%"
+    <div *ngIf="modelo == 0" class="model-list p-3">
+      <ng-container>
+        <div class="text-end mb-3 d-flex">
+          <button (click)="filter = true" type="button"
+            class="me-2 btn btn-outline-dark d-flex justify-content-center align-items-center">
+            <i class="material-icons">filter_alt</i>
+            <span>Filtro</span>
+          </button>
+          <button [style.background-color]="panel ? '#F5F5F5' : 'transparent'" (click)="panel = !panel" type="button"
+            class="btn btn-outline-dark d-flex justify-content-center align-items-center">
+            <i class="material-icons-outlined">splitscreen</i>
+            <span>{{panel ? 'Painel' : 'Lista'}}</span>
+          </button>
+        </div>
+        <ng-container *ngIf="panel">
+          <div class="announce mb-5" *ngFor="let item of [1,2,3,4,5]">
+            <img class="rounded-3" width="100%" height="250px"
+              src="https://htmlcolorcodes.com/assets/images/colors/steel-gray-color-solid-background-1920x1080.png"
+              alt="">
+            <h4 class="fw-bold mt-4">Porsche</h4>
+            <h4 class="mb-3 mt-2">718 Cayman GT4 (982)</h4>
+            <h1 class="fw-bold">R$ 509.900</h1>
+            <div class="d-flex justify-content-between mt-3">
+              <label for="">2020/2021</label>
+              <label for="">2.118 km</label>
+            </div>
+          </div>
+        </ng-container>
+        <div *ngIf="!panel">
+          <app-announce-card></app-announce-card>
+        </div>
+        <div class="text-center mt-4">
+          <a style="font-size: 14px;" href="">Ver mais anúncios</a>
+        </div>
+        div>
+      </ng-container>
+    </div>
+
+  </div>
+
+  <ng-template #modelin>
+    <!-- <img class="animate__animated animate__zoomIn" [class.d-none]="selected.length == 0" width="100%"
       src="https://cdn.nickbuilder.com.br/e05baae9-4eef-4401-a531-96dd9b9fa5d4/img/PORSCHE_911_3.0_24V_H6_GASOLINA_CARRERA_PDK_34658317501038270.png"
       alt=""> -->
-        <app-carousel></app-carousel>
-        <div class="d-flex overflow-scroll px-3">
-            <div (click)="model = item.id" [ngStyle]="{'background-color': model == item.id ? selected.button : 'transparent', 'color': model == item.id ? 'white' : 'black'}" *ngFor="let item of selected.models" class="model-button me-3">
-                <span>{{item.name}}</span>
-            </div>
-        </div>
-    </ng-template>
-
-    <div style="height: 81.6vh;border-top-left-radius: 10px;border-top-right-radius: 10px;" class="offcanvas offcanvas-bottom visible-a" [class.show]="filter" tabindex="-1" id="filterCanvas" aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" (click)="filter = false"></button>
-            <h5 class="offcanvas-title fw-bold m-auto" id="offcanvasBottomLabel">Filtro avançado</h5>
-        </div>
-        <div class="offcanvas-body small text-start">
-            <app-filtros></app-filtros>
-        </div>
+    <app-carousel></app-carousel>
+    <div class="d-flex overflow-scroll px-3">
+      <div (click)="model = item.id"
+        [ngStyle]="{'background-color': model == item.id ? selected.button : 'transparent', 'color': model == item.id ? 'white' : 'black'}"
+        *ngFor="let item of selected.models" class="model-button me-3">
+        <span>{{item.name}}</span>
+      </div>
     </div>
+  </ng-template>
+
+  <div style="height: 81.6vh;border-top-left-radius: 10px;border-top-right-radius: 10px;"
+    class="offcanvas offcanvas-bottom visible-a" [class.show]="filter" tabindex="-1" id="filterCanvas"
+    aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" (click)="filter = false"></button>
+      <h5 class="offcanvas-title fw-bold m-auto" id="offcanvasBottomLabel">Filtro avançado</h5>
+    </div>
+    <div class="offcanvas-body small text-start">
+      <app-filtros></app-filtros>
+    </div>
+  </div>

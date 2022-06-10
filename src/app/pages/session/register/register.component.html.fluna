@@ -1,0 +1,45 @@
+<section class="p-3">
+    <div class="px-0 justify-content-start text-start mb-4 animate__animated animate__fadeIn mb-5">
+        <span class="section-text mb-2">Dados básicos</span>
+        <div class="half-underline"></div>
+    </div>
+    <span>Preencha os dados abaixo para efetuar o cadastro</span>
+    <div>
+        <div class="my-5">
+            <label for="formGroupExampleInput" class="form-label">Nome completo</label>
+            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira seu nome completo">
+        </div>
+        <div class="my-5">
+            <label for="formGroupExampleInput" class="form-label">E-mail</label>
+            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira seu e-mail">
+        </div>
+        <div class="my-5">
+            <label for="formGroupExampleInput" class="form-label">Digite seu celular com DDD</label>
+            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Ex: 31 99999-99999">
+        </div>
+        <span>Por onde deseja receber nosso contato sobre seu interesse?</span>
+        <div class="d-flex mt-3">
+            <div class="form-check me-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    E-mail
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    WhatsApp
+                </label>
+            </div>
+        </div>
+        <button class="btn btn-dark w-100 py-3 mt-5 mb-3">Próximo</button>
+        <div class="text-center">
+            <span>
+                Já possui conta?
+                <a style="font-size: 1rem;" routerLink="/login">
+                    <b>Entrar</b>
+                </a>
+            </span>
+        </div>
+    </div>
+</section>
