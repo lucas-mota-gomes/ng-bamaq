@@ -8,39 +8,22 @@
     <h3 class="fw-bold align-self-start">Fazer Proposta</h3>
     <div class="input-group my-4 justify-content-center">
         <div class="mb-3 w-100">
-            <label for="formGroupExampleInput" class="form-label">Qual o valor (R$) da proposta?</label>
-            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira aqui o valor (R$) da sua proposta">
+            <nick-input [nickCrudField]="proposal.valor" placeholder="Insira aqui o valor (R$) da sua proposta">
+            </nick-input>
         </div>
     </div>
     <p>Qual será a condição de pagamento?</p>
     <div class="d-flex mb-4 justify-content-between w-100">
-        <div class="form-check">
-            <input checked class="form-check-input" value="true" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                À vista
-            </label>
-        </div>
-        <div class="form-check">
-            <input [(ngModel)]="i2" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Entrada + Parcelas
-            </label>
-        </div>
-        <div [(ngModel)]="i3" class="form-check">
-            <input class="form-check-input" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Parcelas
-            </label>
-        </div>
+        <nick-radio [nickCrudField]="proposal.payment" [options]="proposalOptions"></nick-radio>
     </div>
     <div class="w-100">
-        <ng-container *ngIf="!i2">
+        <ng-container *ngIf="proposal.payment.value == 1">
             <div class="mb-4 w-100">
-                <label for="formGroupExampleInput" class="form-label">Qual o valor (R$) da proposta?</label>
-                <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira aqui o valor (R$) da sua proposta">
+                <nick-input [nickCrudField]="proposal.entrada" placeholder="Insira aqui o valor (R$) da sua proposta">
+                </nick-input>
             </div>
         </ng-container>
-        <ng-container *ngIf="!i3">
+        <ng-container *ngIf="proposal.payment.value == 1 || proposal.payment.value == 2">
             <div class="d-flex justify-content-between mb-4">
                 <div (click)="parcelas = 12" class="d-flex flex-column justify-content-center align-items-center rounded p-3" [style.background]="parcelas == 12 ? 'black' : 'white'" [style.color]="parcelas == 12 ? 'white' : 'black'" style="border: black solid 1px;">
                     <span>12</span>

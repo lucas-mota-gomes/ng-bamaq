@@ -1,0 +1,60 @@
+<section class="p-3">
+    <h3 class="fw-bold mb-3">Vistoria</h3>
+    <div class="d-flex align-items-center my-3">
+        <div>
+            <span class="me-2 mb-0">Realizada em 29 de março de 2022</span>
+            <br>
+            <span class="me-2 mb-0">Veículo sem restrições</span>
+        </div>
+        <i class="material-icons" style="color:#5BC0DE; font-size: xx-large;">verified</i>
+    </div>
+    <div class="d-flex align-items-center my-5">
+        <div class="me-4">
+            <img src="https://via.placeholder.com/60.png" height="60px" width="60px" alt="">
+        </div>
+        <div>
+            <span><b>1 ano</b> de garantia</span>
+            <br>
+            <span><b>160 itens</b> verificados</span>
+        </div>
+    </div>
+
+    <span>Foram verificados 160 itens:</span>
+    <div class="my-5">
+        <div class="my-4" *ngFor="let drop of [1,2,3,4,5]; let v = index">
+            <div (click)="toggleDropDown(v)" class="d-flex justify-content-center align-items-center w-100">
+                <i class="material-icons" style="font-size: 1.5rem;">{{dropdown[v]?
+                    'keyboard_arrow_down' : 'keyboard_arrow_right'}}</i>
+                <span>Lataria</span>
+                <i class="material-icons ms-3 me-auto" style="color:#5BC0DE">verified</i>
+            </div>
+            <div *ngIf="dropdown[v]">
+                <div style="font-size: 12px;" class="px-4 py-2">
+                    <p>Status: <b style="color: #54c484;">Bom estado</b></p>
+                    <p>
+                        Observações: <b style="color: #707070">Painel traseiro trocado, ponta da longarina traseira
+                            direta
+                            reparada/recuperada, ponta da longarina
+                            traseira esquerda reparada/recuperada.</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-5">
+        <h3 class="fw-bold mb-3">Detalhes do carro</h3>
+        <div class="overflow-scroll d-flex">
+            <div *ngFor="let item of [1,2,3,4,5,6]" class="text-center">
+                <img class="me-3 rounded-3" src="https://via.placeholder.com/270x180.png" height="180px" width="270px" alt="">
+                <p class="my-2">Para-choque traseiro</p>
+            </div>
+        </div>
+    </div>
+    <div class="my-4">
+        <h3 class="fw-bold mb-3">Revisões programadas</h3>
+        <span>2 realizadas de 3 revisões previstas.</span>
+        <br>
+        <span>A última revisão foi realizada em 14 de junho de 2022.</span>
+    </div>
+    <hr>
+</section>

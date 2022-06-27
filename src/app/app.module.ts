@@ -15,6 +15,8 @@ import { SearchPlateComponent } from './pages/seller/search-plate/search-plate.c
 import { ProposalComponent } from './component/proposal/proposal.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './pages/session/register/register.component';
+import { LoadingComponent } from './component/loading/loading.component';
+import { VistoriaComponent } from './component/vistoria/vistoria.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { RegisterComponent } from './pages/session/register/register.component';
     SearchPlateComponent,
     ProposalComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoadingComponent,
+    VistoriaComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/session/login/login.component';
 import { SearchPlateComponent } from './pages/seller/search-plate/search-plate.component';
 import { RegisterComponent } from './pages/session/register/register.component';
+import { LoadingComponent } from './component/loading/loading.component';
+import { VistoriaComponent } from './component/vistoria/vistoria.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path: 'proposal', component: ProposalComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'seller/sell', component: SearchPlateComponent }
+  { path: 'seller/sell', component: SearchPlateComponent },
+  { path: 'loading', component: LoadingComponent },
+  { path: 'vistoria', component: VistoriaComponent }
 ];
 
 @NgModule({

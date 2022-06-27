@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class ProposalComponent implements OnInit {
   logged: boolean;
   sent: boolean;
+  i2;
+  i3;
+  parcelas: number;
   constructor() { }
 
   ngOnInit(): void {
