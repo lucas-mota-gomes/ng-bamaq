@@ -1,0 +1,33 @@
+<section class="p-3">
+    <div *ngFor="let i of [1,2,3]" class="my-3">
+        <div>
+            <div class="d-flex justify-content-between align-items-center py-2 cursor-pointer">
+                <h4 class="fw-bold m-0">718</h4>
+                <i style="color: #D6D6D6;" class="material-icons">keyboard_arrow_down</i>
+            </div>
+            <hr class="mt-0 mb-4 p-0" style="border-color:#D6D6D6;">
+        </div>
+        <div class="model-container">
+            <div *ngFor="let item of [1,2,3]" class="row justify-content-center" style="text-align: -webkit-center;">
+                <div class="col p-0 m-2" style="width: 50vw;">
+                    <div class="model-card animate__animated animate__fadeInLeft">
+                        <img src="https://via.placeholder.com/142x86.png" alt=" ">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="section-text mt-2 mb-3">718</span>
+                            <a href="#">Tenho interesse</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0 m-2" style="width: 50vw;">
+                    <div class="model-card animate__animated animate__fadeInRight">
+                        <img src="https://via.placeholder.com/142x86.png" alt=" ">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <span class="section-text mt-2 mb-3">718</span>
+                            <a href="#">Tenho interesse</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

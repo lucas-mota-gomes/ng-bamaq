@@ -9,6 +9,7 @@ import { SearchPlateComponent } from './pages/seller/search-plate/search-plate.c
 import { RegisterComponent } from './pages/session/register/register.component';
 import { LoadingComponent } from './component/loading/loading.component';
 import { VistoriaComponent } from './component/vistoria/vistoria.component';
+import { ModelsComponent } from './component/models/models.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'seller/sell', component: SearchPlateComponent },
   { path: 'loading', component: LoadingComponent },
-  { path: 'vistoria', component: VistoriaComponent }
+  { path: 'vistoria', component: VistoriaComponent },
+  { path: 'models', component: ModelsComponent }
 ];
 
 @NgModule({

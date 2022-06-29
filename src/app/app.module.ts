@@ -17,6 +17,7 @@ import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './pages/session/register/register.component';
 import { LoadingComponent } from './component/loading/loading.component';
 import { VistoriaComponent } from './component/vistoria/vistoria.component';
+import { ModelsComponent } from './component/models/models.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { VistoriaComponent } from './component/vistoria/vistoria.component';
     FooterComponent,
     RegisterComponent,
     LoadingComponent,
-    VistoriaComponent
+    VistoriaComponent,
+    ModelsComponent
   ],
   imports: [
     BrowserModule,
