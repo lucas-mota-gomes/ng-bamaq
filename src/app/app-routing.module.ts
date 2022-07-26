@@ -1,3 +1,4 @@
+import { AnnounceCardComponent } from './component/announce-card/announce-card.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ProposalComponent } from './component/proposal/proposal.component';
@@ -10,6 +11,8 @@ import { RegisterComponent } from './pages/session/register/register.component';
 import { LoadingComponent } from './component/loading/loading.component';
 import { VistoriaComponent } from './component/vistoria/vistoria.component';
 import { ModelsComponent } from './component/models/models.component';
+import { SellerHomeComponent } from './pages/seller/seller-home/seller-home.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,7 +25,9 @@ const routes: Routes = [
   { path: 'seller/sell', component: SearchPlateComponent },
   { path: 'loading', component: LoadingComponent },
   { path: 'vistoria', component: VistoriaComponent },
-  { path: 'models', component: ModelsComponent }
+  { path: 'models', component: ModelsComponent },
+  { path: 'announce-card', component: AnnounceCardComponent },
+  { path: 'seller', component: SellerHomeComponent }
 ];
 
 @NgModule({

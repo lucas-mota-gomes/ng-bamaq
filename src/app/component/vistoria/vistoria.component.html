@@ -22,11 +22,11 @@
     <span>Foram verificados 160 itens:</span>
     <div class="my-5">
         <div class="my-4" *ngFor="let drop of [1,2,3,4,5]; let v = index">
-            <div (click)="toggleDropDown(v)" class="d-flex justify-content-center align-items-center w-100">
+            <div (click)="toggleDropDown(v)" class="d-flex justify-content-start align-items-center w-100 position-relative">
                 <i class="material-icons" style="font-size: 1.5rem;">{{dropdown[v]?
                     'keyboard_arrow_down' : 'keyboard_arrow_right'}}</i>
-                <span>Lataria</span>
-                <i class="material-icons ms-3 me-auto" style="color:#5BC0DE">verified</i>
+                <span>Lataria {{drop*321}}</span>
+                <i class="material-icons text-center position-absolute" style="color:#5BC0DE; left: 8rem">verified</i>
             </div>
             <div *ngIf="dropdown[v]">
                 <div style="font-size: 12px;" class="px-4 py-2">

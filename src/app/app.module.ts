@@ -18,6 +18,7 @@ import { RegisterComponent } from './pages/session/register/register.component';
 import { LoadingComponent } from './component/loading/loading.component';
 import { VistoriaComponent } from './component/vistoria/vistoria.component';
 import { ModelsComponent } from './component/models/models.component';
+import { SellerHomeComponent } from './pages/seller/seller-home/seller-home.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ModelsComponent } from './component/models/models.component';
     RegisterComponent,
     LoadingComponent,
     VistoriaComponent,
-    ModelsComponent
+    ModelsComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,

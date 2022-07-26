@@ -1,0 +1,18 @@
+.sellerHeaderSection {
+    color: white;
+    background-color: black;
+    & img {
+        transform: scale(1.1);
+    }
+}
+
+.brandCarousel {
+    overflow-x: scroll;
+    display: flex;
+}
+
+.blackBackground {
+    background-color: black;
+    color: white;
+    height: fit-content;
+}

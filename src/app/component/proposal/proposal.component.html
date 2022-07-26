@@ -5,65 +5,52 @@
 </div>
 
 <div *ngIf="logged && !sent" class="d-flex flex-column w-100 justify-content-center align-items-center p-3">
-    <h3 class="fw-bold align-self-start">Fazer Proposta</h3>
-    <div class="input-group my-4 justify-content-center">
-        <div class="mb-3 w-100">
-            <label for="formGroupExampleInput" class="form-label">Qual o valor (R$) da proposta?</label>
-            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira aqui o valor (R$) da sua proposta">
-        </div>
+    <h3 class="fw-bold align-self-start">Endereço de entrega</h3>
+    <div class="rounded-3 w-100 border position-relative p-3 mt-3">
+        <a href="" class="position-absolute" style="top: 16px; right: 11px">Alterar</a>
+        <span>Gustavo Souza</span>
+        <br>
+        <span>R. Levindo Lopes, 323</span>
+        <br>
+        <span>Funcionários</span>
+        <br>
+        <span>Belo Horizonte - MG, 30140-170</span>
     </div>
-    <p>Qual será a condição de pagamento?</p>
-    <div class="d-flex mb-4 justify-content-between w-100">
-        <div class="form-check">
-            <input checked class="form-check-input" value="true" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                À vista
-            </label>
-        </div>
-        <div class="form-check">
-            <input [(ngModel)]="i2" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Entrada + Parcelas
-            </label>
-        </div>
-        <div [(ngModel)]="i3" class="form-check">
-            <input class="form-check-input" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Parcelas
-            </label>
-        </div>
-    </div>
-    <div class="w-100">
-        <ng-container *ngIf="!i2">
-            <div class="mb-4 w-100">
-                <label for="formGroupExampleInput" class="form-label">Qual o valor (R$) da proposta?</label>
-                <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira aqui o valor (R$) da sua proposta">
+    <div class="d-flex my-4 justify-content-center">
+        <div class="me-3">
+            <input type="text" class="form-control py-3" id="formGroupExampleInput" placeholder="Insira aqui o valor (R$)">
+            <div class="valid-feedback" style="display: block;">
+                Proposta não aceita, tente outro valor.
             </div>
-        </ng-container>
-        <ng-container *ngIf="!i3">
-            <div class="d-flex justify-content-between mb-4">
-                <div (click)="parcelas = 12" class="d-flex flex-column justify-content-center align-items-center rounded p-3" [style.background]="parcelas == 12 ? 'black' : 'white'" [style.color]="parcelas == 12 ? 'white' : 'black'" style="border: black solid 1px;">
-                    <span>12</span>
-                    <span>Meses</span>
-                </div>
-
-                <div (click)="parcelas = 24" class="d-flex flex-column justify-content-center align-items-center rounded p-3" [style.background]="parcelas == 24 ? 'black' : 'white'" [style.color]="parcelas == 24 ? 'white' : 'black'" style="border: black solid 1px;">
-                    <span>24</span>
-                    <span>Meses</span>
-                </div>
-                <div (click)="parcelas = 36" class="d-flex flex-column justify-content-center align-items-center rounded p-3" [style.background]="parcelas == 36 ? 'black' : 'white'" [style.color]="parcelas == 36 ? 'white' : 'black'" style="border: black solid 1px;">
-                    <span>36</span>
-                    <span>Meses</span>
-                </div>
-                <div (click)="parcelas = 48" class="d-flex flex-column justify-content-center align-items-center rounded p-3" [style.background]="parcelas == 48 ? 'black' : 'white'" [style.color]="parcelas == 48 ? 'white' : 'black'" style="border: black solid 1px;">
-                    <span>48</span>
-                    <span>Meses</span>
-                </div>
-            </div>
-        </ng-container>
+        </div>
+        <div>
+            <button class="btn btn-dark px-4 py-3">Enviar</button>
+        </div>
     </div>
-    <button (click)="sent = !sent" class="btn btn-dark w-100 py-3">Enviar</button>
-    <a class="my-4" href="#">Deseja ver outras condições de proposta?</a>
+    <div class="d-flex justify-content-start w-100">
+        <div class="d-flex">
+            <div class="me-5">
+                <p><b>Subtotal</b></p>
+                <p><b>Frete</b></p>
+                <p><b>Total</b></p>
+            </div>
+            <div>
+                <p>R$ 1.080.000</p>
+                <p>R$ 1.000</p>
+                <p>R$ 1.081.000</p>
+            </div>
+        </div>
+    </div>
+    <h3 class="fw-bold align-self-start my-3">Forma de pagamento</h3>
+    <div class="w-100 text-start my-3">
+        <div class="d-flex">
+            <img src="https://via.placeholder.com/41x25.png" width="41px" height="25px" alt="">
+            <span class="mx-2"><b>MasterCard (Crédito)</b> termina em 1234</span>
+        </div>
+        <span><a href="">Clique aqui</a> para trocar o cartão</span>
+    </div>
+    <button (click)="sent = !sent" class="btn btn-dark w-100 py-3">Finalizar Pagamento</button>
+    <!-- <a class="my-4" href="#">Deseja ver outras condições de proposta?</a> -->
 </div>
 
 <div *ngIf="logged && sent" class="d-flex flex-column w-100 justify-content-center align-items-center" style="height: 100vh;">
